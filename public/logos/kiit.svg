@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <circle cx="24" cy="24" r="23" fill="#1a5632" stroke="#2d8a4e" stroke-width="2"/>
+  <text x="24" y="17" text-anchor="middle" font-family="Arial Black, sans-serif" font-weight="900" font-size="11" fill="white" letter-spacing="1">KIIT</text>
+  <line x1="12" y1="21" x2="36" y2="21" stroke="#f4a020" stroke-width="1.5"/>
+  <text x="24" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="5.5" fill="#c8e6c9" letter-spacing="0.5">DEEMED TO BE</text>
+  <text x="24" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="6" fill="#f4a020" letter-spacing="0.5">UNIVERSITY</text>
+</svg>

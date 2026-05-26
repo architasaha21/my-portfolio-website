@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <circle cx="24" cy="24" r="23" fill="#1a237e" stroke="#3949ab" stroke-width="2"/>
+  <text x="24" y="16" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="6" fill="#e8eaf6" letter-spacing="0.5">LORETO</text>
+  <text x="24" y="23" text-anchor="middle" font-family="Georgia, serif" font-weight="400" font-size="4.5" fill="#9fa8da">DAY SCHOOL</text>
+  <circle cx="24" cy="32" r="6" fill="none" stroke="#ffd54f" stroke-width="1.2"/>
+  <text x="24" y="34.5" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="6" fill="#ffd54f">✦</text>
+</svg>

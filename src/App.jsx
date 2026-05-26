@@ -26,8 +26,13 @@ function App() {
       </AnimatePresence>
       {!loading && (
         <>
+          <div className="ambient-glows">
+            <div className="ambient-glow ambient-glow--1" />
+            <div className="ambient-glow ambient-glow--2" />
+            <div className="ambient-glow ambient-glow--3" />
+          </div>
           <Navbar />
-          <main>
+          <main style={{ position: 'relative', zIndex: 1 }}>
             <Hero />
             <Works />
             <About />

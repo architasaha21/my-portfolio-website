@@ -13,6 +13,7 @@
   filter: blur(80px);
   opacity: 0.4;
   pointer-events: none;
+  will-change: transform;
 }
 
 .hero__orb--1 {
@@ -21,6 +22,7 @@
   background: rgba(196, 126, 181, 0.3);
   top: -100px;
   right: -100px;
+  animation: orbFloat1 10s ease-in-out infinite;
 }
 
 .hero__orb--2 {
@@ -29,6 +31,7 @@
   background: rgba(155, 114, 207, 0.25);
   bottom: -50px;
   left: -50px;
+  animation: orbFloat2 12s ease-in-out infinite;
 }
 
 .hero__orb--3 {
@@ -37,6 +40,22 @@
   background: rgba(126, 181, 196, 0.2);
   top: 50%;
   left: 40%;
+  animation: orbFloat3 8s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(25px, -15px); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-15px, 20px); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10px, 10px); }
 }
 
 .hero__container {
@@ -165,7 +184,7 @@
   position: absolute;
   z-index: 2;
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
   border-radius: 50px;
   padding: 10px 20px;
@@ -180,6 +199,15 @@
   box-shadow: var(--shadow-md);
   white-space: nowrap;
   text-transform: uppercase;
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+
+.hero__badge--2 { animation-delay: 0.5s; }
+.hero__badge--3 { animation-delay: 1s; }
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 .hero__badge-dot {

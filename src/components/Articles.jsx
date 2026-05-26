@@ -19,35 +19,26 @@ const articles = [
   },
 ];
 
+const fadeUp = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } };
+
 export default function Articles() {
   const { ref, inView } = useScrollReveal(0.1);
-  const hv = { hidden: { opacity: 0, y: 60, filter: 'blur(8px)' }, visible: { opacity: 1, y: 0, filter: 'blur(0px)' } };
 
   return (
     <section id="articles" className="section articles" ref={ref}>
-      {/* Animated gradient background */}
       <div className="articles__gradient-bg" />
-
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <motion.p className="section-label" variants={hv} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.6 }}>Writing</motion.p>
-        <motion.h2 className="section-title" variants={hv} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.6, delay: 0.1 }}>
-          Blogs
-        </motion.h2>
-        <motion.div className="articles__medium-link" variants={hv} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.6, delay: 0.15 }}>
+        <motion.p className="section-label" variants={fadeUp} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.5 }}>Writing</motion.p>
+        <motion.h2 className="section-title" variants={fadeUp} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.5, delay: 0.08 }}>Blogs</motion.h2>
+        <motion.div className="articles__medium-link" variants={fadeUp} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.5, delay: 0.12 }}>
           <SiMedium size={20} />
-          <a href="https://medium.com/@archita.saha2106" target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>
-            @archita.saha2106
-          </a>
+          <a href="https://medium.com/@archita.saha2106" target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>@archita.saha2106</a>
         </motion.div>
-
         <div className="articles__grid">
           {articles.map((article, i) => (
-            <motion.a key={article.title} href={article.link}
-              className="articles__terminal" target="_blank" rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 50 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.25 + i * 0.15, duration: 0.6 }}
-              whileHover={{ y: -6, scale: 1.02 }}>
-              {/* Terminal chrome */}
+            <motion.a key={article.title} href={article.link} className="articles__terminal" target="_blank" rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 35 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.2 + i * 0.1, duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}>
               <div className="articles__terminal-bar">
                 <div className="articles__terminal-dots">
                   <span className="articles__dot articles__dot--r" />
@@ -56,16 +47,13 @@ export default function Articles() {
                 </div>
                 <span className="articles__terminal-title mono">article.exe</span>
               </div>
-              {/* Content */}
               <div className="articles__terminal-body">
                 <h3 className="articles__title">{article.title}</h3>
                 <p className="articles__excerpt">{article.excerpt}</p>
                 <div className="articles__terminal-sep" />
                 <div className="articles__terminal-footer">
                   <span className="articles__date mono">{article.date}</span>
-                  <span className="articles__read-btn mono">
-                    Read <FiExternalLink size={13} />
-                  </span>
+                  <span className="articles__read-btn mono">Read <FiExternalLink size={13} /></span>
                 </div>
               </div>
             </motion.a>

@@ -22,6 +22,7 @@
   position: relative;
   width: 50%;
   padding: 20px 0;
+  will-change: transform, opacity;
 }
 
 .experience__item--left {
@@ -77,9 +78,22 @@
   justify-content: flex-end;
 }
 
-.experience__company-icon {
-  display: flex;
+.experience__company-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.experience__company-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .experience__company {

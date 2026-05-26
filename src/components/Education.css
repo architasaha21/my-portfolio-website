@@ -9,18 +9,19 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
+  will-change: transform, opacity;
 }
 
-.education__icon {
+.education__logo {
   flex-shrink: 0;
   width: 56px;
   height: 56px;
-  border-radius: 16px;
-  background: var(--accent-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  border-radius: 14px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
 }
 
 .education__info {

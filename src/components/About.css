@@ -41,53 +41,107 @@
   color: var(--text-muted);
 }
 
-.about__skills-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  margin-bottom: 24px;
-  color: var(--text-primary);
+/* ===== NEO-BRUTALISM SKILLS SECTION ===== */
+.skills-brutal__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
 }
 
-.about__skills-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.about__skill-group {
-  padding: 20px;
-}
-
-.about__skill-group:hover {
-  transform: translateY(-2px);
-}
-
-.about__skill-category {
-  font-size: 0.65rem;
-  letter-spacing: 2px;
+.skills-brutal__title {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #2d1b33;
+  background: #ffe066;
+  padding: 10px 32px;
+  border: 2px solid #2d1b33;
+  border-radius: 50px;
+  box-shadow: 4px 4px 0px 0px #2d1b33;
   text-transform: uppercase;
-  color: var(--accent-primary);
-  margin-bottom: 12px;
+  letter-spacing: 1.5px;
 }
 
-.about__skill-items {
+[data-theme="dark"] .skills-brutal__title {
+  color: #f2e6f7;
+  background: #e69ed5;
+  border-color: #f2e6f7;
+  box-shadow: 4px 4px 0px 0px #f2e6f7;
+}
+
+.about__skills-grid-brutal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 576px) {
+  .about__skills-grid-brutal {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+.skills-brutal__card {
+  background: #ffffff;
+  border: 2px solid #2d1b33;
+  border-radius: 14px;
+  padding: 24px 20px 20px 20px;
+  position: relative;
+  box-shadow: 4px 4px 0px 0px #2d1b33;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  will-change: transform;
+}
+
+[data-theme="dark"] .skills-brutal__card {
+  background: #241a33;
+  border-color: #f2e6f7;
+  box-shadow: 4px 4px 0px 0px #f2e6f7;
+}
+
+.skills-brutal__badge {
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2d1b33;
+  padding: 4px 16px;
+  border: 2px solid #2d1b33;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+[data-theme="dark"] .skills-brutal__badge {
+  border-color: #f2e6f7;
+}
+
+.skills-brutal__items {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
-.about__skill-item {
+.skills-brutal__item {
   font-size: 0.8rem;
-  color: var(--text-secondary);
-  padding: 4px 10px;
-  background: var(--bg-tertiary);
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #2d1b33;
+  background: #ffffff;
+  padding: 5px 12px;
+  border: 1.5px solid #2d1b33;
+  border-radius: 20px;
+  transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.about__skill-item:hover {
-  background: var(--accent-primary);
-  color: white;
+[data-theme="dark"] .skills-brutal__item {
+  color: #f2e6f7;
+  background: #1a1225;
+  border-color: #f2e6f7;
+}
+
+.skills-brutal__item:hover {
+  transform: scale(1.05);
+  background: var(--bg-tertiary);
 }
 
 @media (max-width: 768px) {
@@ -98,13 +152,14 @@
 
   .about__highlights {
     gap: 20px;
+    justify-content: center;
   }
 
   .about__highlight-num {
     font-size: 1.8rem;
   }
 
-  .about__skills-grid {
+  .about__skills-grid-brutal {
     grid-template-columns: 1fr;
   }
 }

@@ -85,11 +85,26 @@ html {
 
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-primary);
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 35%,
+    var(--bg-tertiary) 70%,
+    var(--bg-primary) 100%
+  );
+  background-size: 300% 300%;
+  animation: bodyGradientMove 16s ease infinite;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: color 0.4s ease;
+  will-change: background-position;
+}
+
+@keyframes bodyGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ===== SCROLLBAR ===== */
@@ -199,12 +214,12 @@ button {
 /* ===== GLASS CARD ===== */
 .glass-card {
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 32px;
-  transition: all 0.4s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
   box-shadow: var(--shadow-sm);
 }
 
@@ -212,7 +227,7 @@ button {
   background: var(--bg-card-hover);
   border-color: var(--border-color-strong);
   box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 /* ===== GRADIENT BUTTON ===== */
@@ -369,3 +384,71 @@ button {
     font-size: 0.9rem;
   }
 }
+
+/* ===== ULTRA-PREMIUM SOFT MOVING GLOWS ===== */
+.ambient-glows {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  will-change: transform;
+  mix-blend-mode: multiply;
+  opacity: 0.14;
+  transition: opacity 0.5s ease;
+}
+
+[data-theme="dark"] .ambient-glow {
+  mix-blend-mode: screen;
+  opacity: 0.06;
+}
+
+.ambient-glow--1 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(196, 126, 181, 0.4) 0%, rgba(155, 114, 207, 0.1) 70%);
+  top: -10vw;
+  left: -10vw;
+  animation: floatGlow1 24s ease-in-out infinite alternate;
+}
+
+.ambient-glow--2 {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(126, 181, 196, 0.35) 0%, rgba(155, 114, 207, 0.1) 70%);
+  bottom: -10vw;
+  right: -5vw;
+  animation: floatGlow2 28s ease-in-out infinite alternate;
+}
+
+.ambient-glow--3 {
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, rgba(232, 160, 191, 0.3) 0%, rgba(196, 126, 181, 0.05) 70%);
+  top: 40%;
+  left: 30%;
+  animation: floatGlow3 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(6vw, 4vw) scale(1.1); }
+}
+
+@keyframes floatGlow2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-5vw, -6vw) scale(1.15); }
+}
+
+@keyframes floatGlow3 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(4vw, -4vw) rotate(360deg); }
+}
+
