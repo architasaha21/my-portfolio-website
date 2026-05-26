@@ -1,0 +1,74 @@
+.education__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.education__card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.education__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.education__info {
+  flex: 1;
+}
+
+.education__period {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+}
+
+.education__degree {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.education__school {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.education__desc {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.education__grade {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: var(--accent-gradient);
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .education__card {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

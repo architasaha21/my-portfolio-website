@@ -1,0 +1,63 @@
+.footer {
+  padding: 48px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.footer__logo-dot {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.footer__tagline {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.footer__heart {
+  color: var(--accent-primary);
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.footer__year {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}

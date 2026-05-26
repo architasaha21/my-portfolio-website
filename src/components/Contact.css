@@ -1,0 +1,128 @@
+.contact {
+  background: var(--bg-secondary);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.contact__desc {
+  font-size: 1.05rem;
+  color: var(--text-tertiary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contact__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact__social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.contact__social-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.contact__social-arrow {
+  color: var(--text-muted);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.contact__social:hover .contact__social-arrow {
+  opacity: 1;
+  color: var(--accent-primary);
+}
+
+/* Form */
+.contact__form-card {
+  padding: 36px;
+}
+
+.contact__form-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+}
+
+.contact__form-header svg {
+  color: var(--accent-primary);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contact__input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact__input::placeholder {
+  color: var(--text-muted);
+}
+
+.contact__input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(196, 126, 181, 0.1);
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
