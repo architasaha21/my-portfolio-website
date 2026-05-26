@@ -5,7 +5,7 @@ import './About.css';
 const skillGroups = [
   { 
     category: 'Languages', 
-    items: ['Java', 'Python', 'JavaScript', 'C'],
+    items: ['Python', 'C++', 'JavaScript', 'Java'],
     color: '#ff80b3', 
     darkColor: '#ff4d94',
     bg: '#fff0f5'
@@ -64,15 +64,10 @@ export default function About() {
             <motion.p className="section-label" variants={fadeUp} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.5 }}>About Me</motion.p>
             <motion.h2 className="section-title" variants={fadeUp} initial="hidden" animate={inView ? 'visible' : 'hidden'} transition={{ duration: 0.5, delay: 0.08 }}>Who I Am</motion.h2>
             <p className="about__bio">
-              Hey there! I'm Archita — a curious developer who thrives at the intersection of building
-              and learning. I'm currently pursuing B.Tech in Computer Science at KIIT, Bhubaneswar
-              (Class of 2027) and I love crafting things that live on the internet.
+              Hey there! I'm <strong>Archita Saha</strong> — a computer science student at <strong>KIIT, Bhubaneswar (Class of 2027)</strong> with a strong focus on logical problem-solving and software development. I enjoy building functional, well-designed projects for the web.
             </p>
             <p className="about__bio">
-              I don't believe in boxing myself into one domain. From shipping full-stack apps and
-              cracking 750+ DSA problems to diving into ML and exploring GenAI — I'm always chasing
-              the next challenge. Currently an ASE Intern at Accenture, building
-              real-world software every day. ✨
+              I don't define myself by a single domain. Whether it's developing clean user interfaces, building server logic, solving DSA challenges, or working on Machine Learning models, I'm always eager to learn and build. <strong>I am actively seeking Software Engineering internships or AI/ML-focused opportunities</strong> where I can collaborate, learn, and build meaningful software! 🚀✨
             </p>
             <div className="about__highlights">
               {[
@@ -94,7 +89,7 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 }}>
             
             <div className="skills-brutal__header">
-              <span className="skills-brutal__title">SKILLS 🛠️</span>
+              <span className="skills-brutal__title">SKILLS ✨</span>
             </div>
 
             <div className="about__skills-grid-brutal">

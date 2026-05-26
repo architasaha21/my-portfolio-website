@@ -45,7 +45,10 @@ export default function Articles() {
                   <span className="articles__dot articles__dot--y" />
                   <span className="articles__dot articles__dot--g" />
                 </div>
-                <span className="articles__terminal-title mono">article.exe</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span className="articles__terminal-title mono">article.exe</span>
+                  <SiMedium size={13} style={{ color: 'var(--text-muted)' }} />
+                </div>
               </div>
               <div className="articles__terminal-body">
                 <h3 className="articles__title">{article.title}</h3>

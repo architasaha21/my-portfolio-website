@@ -24,11 +24,15 @@
 }
 
 .articles__medium-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 8px;
+  margin-bottom: 12px;
   color: var(--text-muted);
+}
+
+.articles__medium-link svg {
+  flex-shrink: 0;
 }
 
 .articles__medium-link a:hover {

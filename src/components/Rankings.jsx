@@ -10,7 +10,7 @@ const rankings = [
     icon: <SiLeetcode size={28} />,
     handle: 'architasaha21',
     rating: '1673',
-    rank: 'Specialist',
+    rank: '—',
     problemsSolved: '400+',
     color: '#f89f1b',
     link: 'https://leetcode.com/u/architasaha21/',
